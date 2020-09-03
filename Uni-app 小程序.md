@@ -12,6 +12,8 @@
 
 * 小程序。需要设置placeHolder 的样式的话，需要放在顶层css文件中。
 
+  * 监听是否到可视区，是否到某个部分，可以用[intersection-observer](https://www.colabug.com/goto/aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQVBJL0ludGVyc2VjdGlvbl9PYnNlcnZlcl9BUEk=)  。并且存在兼容性问题（ios 12.2以下不行），github有w3c group的[intersection-observer](https://www.colabug.com/goto/aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvQVBJL0ludGVyc2VjdGlvbl9PYnNlcnZlcl9BUEk=) 的polyfill。
+
 * 小程序的canvas组件。源代码来自于https://github.com/kuckboy1994/mp_canvas_drawer。里面
 
   `````javascript
@@ -348,3 +350,4 @@
 
   
 
+* 小程序设置border 为1rpx的时候，有些机型会在某些方向上展示不出来，比如iphonex 的右边border不显示。，此时加上 transform: translateY(0px) translateX(0px) 即可解决
